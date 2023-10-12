@@ -1,0 +1,513 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #1B1C1E;
+  }
+  
+  .loading-screen {
+      font-family: 'hanson', sans-serif;
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+      height: 100vh;
+      background-color: #1B1C1E;
+      color: #AB88D9;
+      overflow: hidden;
+  }
+  
+  .loading-section {
+      position: absolute;
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .loading-section .title {
+      margin: 0px 20px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      font-size: 40px;
+  }
+  
+  .loading-section .bracket {
+      font-size: 40px;
+      margin: 0px 30px;
+      font-family: 'hanson', sans-serif;
+      color: #5FC58E;
+  }
+  
+  #loader {
+      font-size: 40px;
+      font-family: 'hanson', sans-serif;
+      color: #5FC58E;
+  }
+  
+  /* Animation sliding */
+  @keyframes sliding {
+      from {
+          transform: translateX(5%);
+      }
+      to {
+          transform: translateX(-30%);
+      }
+  }
+
+  .container2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      width: 100%;
+  }
+  
+  /* Center the h1 element and apply Hanson font */
+  h1 {
+      text-align: center;
+      font-family: "Hanson", sans-serif;
+      color: #fff;
+      font-size: 7rem;
+      text-transform: uppercase;
+  }
+
+  
+  /* Style the h2 elements with smaller font size and the same font */
+  .wrapper {
+      position: relative;
+      text-align: left;
+      height: 1.2em;
+  }
+  
+  .wrapper .strong {
+      font-family: "Hanson", sans-serif;
+      font-size: 5rem;
+      text-transform: uppercase;
+      padding-top: 3%;
+      font-weight: inherit;
+      display: flex;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #fff;
+  }
+  
+  .wrapper .space {
+      padding: 0.1em;
+  }
+  
+  .wrapper :is(.in, .out) {
+      opacity: 0;
+      transform: scaleY(0);
+  }
+  
+  .strong.active .out {
+      opacity: 1;
+      transform: scaleY(1);
+      animation: textWave 0.2s ease reverse forwards;
+  }
+  
+  .wrapper .in {
+      animation: textWave 0.2s ease forwards;
+  }
+  
+  @keyframes textWave {
+      0% {
+          opacity: 0;
+          transform: scaleY(0);
+      }
+      100% {
+          opacity: 1;
+          transform: scaleY(1);
+      }
+  }
+  
+  .gallery .scroll-down {
+      margin-top: -10%;
+      width: 50px;
+      height: 55px;
+      display: grid;
+      place-content: center;
+      margin-inline: auto;
+      border: 1px solid #5FC58E;
+      border-radius: 50%;
+      transition: 0.5s ease;
+      animation: scrollDown 2.5s linear infinite alternate;
+  }
+  
+  .gallery .scroll-down img {
+      width: 22px;
+  }
+  
+  @keyframes scrollDown {
+      0% {
+          transform: translateY(-12px);
+      }
+      100% {
+          transform: translateY(12px);
+      }
+  }
+  
+
+  .image-container img {
+    width: 100%; /* Make the image fill the container width */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+}
+
+.waves2{
+    rotate: -180deg;
+    margin-top: -5%;
+}
+
+h4{
+    font-family: 'Min Sans';
+    text-transform: uppercase;
+    text-align: center;
+    width: 5%;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    color: #fff;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radical-gradient{
+    background: rgb(96,198,143);
+    background: radial-gradient(ellipse 120% 100% at center, rgba(96,198,143,1) 0%, rgba(27,28,30,1) 45%);
+}
+
+.sub-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+p{
+    font-family: "Hanson", sans-serif;
+    font-size: 3rem;
+    line-height: 1.2;
+    color: #fff;
+    width: 50%;
+}
+  
+  /* * *
+  Media Queries 
+  * * */
+  
+  @media (max-width: 319px) {
+  
+      h1 {
+          text-align: center;
+          font-size: 3rem; /* Adjust font size as needed */
+      }
+  
+      .wrapper .strong {
+          position: absolute;
+          top: 0;
+          transform: translateX(-50%);
+          font-size: 1.2rem; /* Adjust font size as needed */
+          padding-top: 5%;
+      }
+  
+      .gallery .scroll-down {
+          margin-top: -30%; 
+      }
+      h4 {
+        font-size: 0.5rem; /* Adjust font size as needed */
+        width: auto; /* Adjust width as needed */
+        border-radius: 50px; /* Adjust border radius as needed */
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .radical-gradient {
+        background: rgb(96, 198, 143);
+        background: radial-gradient(ellipse 80% 70% at center, rgba(96, 198, 143, 1) 0%, rgba(27, 28, 30, 1) 45%);
+    }
+
+    p {
+        font-size: 2rem; /* Adjust the font size for smaller screens */
+        width: 80%; /* Adjust the width for smaller screens */
+    }
+  
+  }
+  
+  
+  
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+  
+  
+      .loading-section{
+          font-size: 3rem;
+      }
+  
+      h1 {
+          text-align: center;
+          font-size: 3.5rem; /* Adjust font size as needed */
+      }
+  
+      .wrapper .strong {
+          position: absolute;
+          top: 0;
+          transform: translateX(-50%);
+          font-size: 1.2rem; /* Adjust font size as needed */
+          padding-top: 5%;
+      }
+  
+      .gallery .scroll-down {
+          margin-top: -30%; 
+      }
+  
+      .text p {
+          font-size: 4rem;
+      }
+      h4 {
+        font-size: 0.5rem; /* Adjust font size as needed */
+        width: auto; /* Adjust width as needed */
+        border-radius: 50px; /* Adjust border radius as needed */
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: left;
+
+    }
+    .radical-gradient {
+        background: rgb(96, 198, 143);
+        background: radial-gradient(ellipse 130% 100% at center, rgba(96, 198, 143, 1) 0%, rgba(27, 28, 30, 1) 45%);
+    }
+
+    p {
+        font-size: 1.7rem; /* Adjust the font size for smaller screens */
+        width: 80%; /* Adjust the width for smaller screens */
+    }
+  }
+  
+  @media (min-width: 481px) and (max-width: 640px) {
+  
+  
+      .loading-section{
+          font-size: 4rem;
+      }
+  
+      h1 {
+          text-align: center;
+          font-size: 3.5rem; /* Adjust font size as needed */
+      }
+  
+      .wrapper .strong {
+          position: absolute;
+          top: 0;
+          transform: translateX(-50%);
+          font-size: 2rem; /* Adjust font size as needed */
+          padding-top: 5%;
+      }
+  
+      .gallery .scroll-down {
+          margin-top: -20%; 
+      }
+      h4 {
+        font-size: 0.75rem; /* Adjust font size as needed */
+        width: auto; /* Adjust width as needed */
+        border-radius: 50px; /* Adjust border radius as needed */
+        border-radius: 50px; /* Adjust border radius as needed */
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .radical-gradient {
+        background: rgb(96, 198, 143);
+        background: radial-gradient(ellipse 80% 70% at center, rgba(96, 198, 143, 1) 0%, rgba(27, 28, 30, 1) 45%);
+    }
+
+    p {
+        font-size: 2rem; /* Adjust the font size for smaller screens */
+        width: 80%; /* Adjust the width for smaller screens */
+    }
+  
+  }
+  
+  @media (min-width: 641px) and (max-width: 768px) {
+      .loading-section{
+          font-size: 4rem;
+      }
+  
+      h1 {
+          text-align: center;
+          font-size: 4.5rem; /* Adjust font size as needed */
+      }
+  
+      .wrapper .strong {
+          position: absolute;
+          top: 0;
+          transform: translateX(-50%);
+          font-size: 2.5rem; /* Adjust font size as needed */
+          padding-top: 5%;
+      }
+  
+      .gallery .scroll-down {
+          margin-top: -20%; 
+  
+      }
+  
+      .text p {
+          font-size: 6rem;
+      }
+      h4 {
+        font-size: 0.9rem; /* Adjust font size as needed */
+        width: auto; /* Adjust width as needed */
+        border-radius: 50px; /* Adjust border radius as needed */
+        border-radius: 50px; /* Adjust border radius as needed */
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .radical-gradient {
+        background: rgb(96, 198, 143);
+        background: radial-gradient(ellipse 80% 70% at center, rgba(96, 198, 143, 1) 0%, rgba(27, 28, 30, 1) 45%);
+    }
+
+    p {
+        font-size: 2rem; /* Adjust the font size for smaller screens */
+        width: 80%; /* Adjust the width for smaller screens */
+    }
+  
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+  
+      .loading-section{
+          font-size: 5rem;
+      }
+  
+      h1 {
+          text-align: center;
+          font-size: 4.5rem; /* Adjust font size as needed */
+      }
+  
+      .wrapper .strong {
+          position: absolute;
+          top: 0;
+          transform: translateX(-50%);
+          font-size: 3rem; 
+          padding-top: 5%;
+      }
+  
+      .gallery .scroll-down {
+          margin-top: -20%; 
+      }
+  
+      h4 {
+        font-size: 1.1rem; /* Adjust font size as needed */
+        width: auto; /* Adjust width as needed */
+        border-radius: 50px; /* Adjust border radius as needed */
+        border-radius: 50px; /* Adjust border radius as needed */
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .radical-gradient {
+        background: rgb(96, 198, 143);
+        background: radial-gradient(ellipse 80% 70% at center, rgba(96, 198, 143, 1) 0%, rgba(27, 28, 30, 1) 45%);
+    }
+
+    p {
+        font-size: 2rem; /* Adjust the font size for smaller screens */
+        width: 80%; /* Adjust the width for smaller screens */
+    }
+  }
+  
+  @media (min-width: 1025px) and (max-width: 1200px) {
+      
+      .loading-section .title {
+          font-size: 39px;
+      }
+  
+      h1 {
+          text-align: center;
+          font-size: 8rem; /* Adjust font size as needed */
+      }
+  
+      .wrapper .strong {
+          position: absolute;
+          top: 0;
+          transform: translateX(-50%);
+          font-size: 5rem; 
+          padding-top: 3%;
+          margin: 0;
+      }
+    
+  }
+  
+  @media (min-width: 1201px) and (max-width: 1440px) {
+      /* Adjust styles for devices between 1201px and 1440px here */
+      .loading-section .title {
+          font-size: 40px;
+      }
+  
+      h1 {
+          text-align: center;
+          font-size: 8rem; /* Adjust font size as needed */
+      }
+  
+      .wrapper .strong {
+          position: absolute;
+          top: 0;
+          transform: translateX(-50%);
+          font-size: 5rem; /* Adjust font size as needed */
+          padding-top: 3%;
+          margin: 0;
+      }
+  
+  }
+  
+  @media (min-width: 1441px) and (max-width: 1600px) {
+      /* Adjust styles for devices between 1441px and 1600px here */
+      .loading-section .title {
+          font-size: 42px;
+      }
+  
+      h1 {
+          text-align: center;
+          font-size: 8rem; /* Adjust font size as needed */
+      }
+  
+      .wrapper .strong {
+          position: absolute;
+          top: 0;
+          transform: translateX(-50%);
+          font-size: 5rem; /* Adjust font size as needed */
+          padding-top: 3%;
+      }
+  
+  }
+  
+  @media (min-width: 1601px) {
+      /* Adjust styles for devices larger than 1600px here */
+      .loading-section .title {
+          font-size: 44px;
+      }
+  
+      h1 {
+          text-align: center;
+          font-size: 8rem; /* Adjust font size as needed */
+      }
+  
+      .wrapper .strong {
+          position: absolute;
+          top: 0;
+          transform: translateX(-50%);
+          font-size: 5rem; /* Adjust font size as needed */
+          padding-top: 3%;
+  
+      }
+  
+  }

@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Hanson';
+    src: url('HansonBold.woff2') format('woff2'),
+        url('HansonBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Min Sans';
+    src: url('MinSans-Thin.woff2') format('woff2'),
+        url('MinSans-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
