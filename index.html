@@ -51,13 +51,11 @@
     <div class="sub-title">
       <h4>About</h4> <!-- Subtitle - 'About' -->
     </div>
-    <div class="radical-gradient">
-      <div class="about">
-        <p class="text"> <!-- Description about the creator -->
-          I'm a web design and development graduate, skilled in creating stunning, user-friendly websites.
-          Passionate about combining aesthetics with functionality for memorable digital experiences.
-        </p>
-      </div>
+    <div class="about">
+      <p class="text"> <!-- Description about the creator -->
+        I'm a web design and development graduate, skilled in creating stunning, user-friendly websites.
+        Passionate about combining aesthetics with functionality for memorable digital experiences.
+      </p>
     </div>
   </section>
 
@@ -114,7 +112,7 @@
   
   <!-- Individual Portfolio Item - Tic Tac Toe -->
   <hr class="line">
-  <div class="content">
+  <div class="content" data-aos="fade-right">
     <p class="title">Tic Tac Toe</p>
     <a href="#" class="btn-icon" aria-label="See more">
       <svg xmlns="http://www.w3.org/2000/svg" width="43" height="20" viewBox="0 0 43 20" fill="none">
@@ -138,23 +136,26 @@
     <div class="sub-title-contact">
       <h4>Contact</h4> <!-- Subtitle - 'Contact' -->
     </div>
-    <div class="radical-gradient">
-      <div class="contact">
-        <p class="text-contact"> <!-- Message for potential work opportunities -->
-          WORK INQUIRY, JOB OPPORTUNITIES?<br>
-          SEND MESSAGE
-        </p>
-        <!-- Links to social profiles -->
-        <a href="https://www.linkedin.com/in/mikontos">LINKEDIN</a>
-        <a href="https://github.com/mikontos79">GITHUB</a>
-        <a href="https://www.instagram.com/mk__shots/">INSTAGRAM</a>
-      </div>
+    <div class="contact">
+      <p class="text-contact"> <!-- Message for potential work opportunities -->
+        WORK INQUIRY, JOB OPPORTUNITIES?<br>
+        SEND MESSAGE
+      </p>
+      <!-- Links to social profiles -->
+      <a href="https://www.linkedin.com/in/mikontos">LINKEDIN</a>
+      <a href="https://github.com/mikontos79">GITHUB</a>
+      <a href="https://www.instagram.com/mk__shots/">INSTAGRAM</a>
     </div>
   </section>
 
   <!-- JavaScript Imports -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script> <!-- jQuery library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script> <!-- GSAP animation library -->
   <script src="assets/js/script.js"></script> <!-- Custom JavaScript file -->
+  
 </body>
 </html>
