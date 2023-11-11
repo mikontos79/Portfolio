@@ -140,3 +140,7 @@ const setLetterEffect = function () {
 
 // call the letter effect function after window loaded
 window.addEventListener("load", setLetterEffect);
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
