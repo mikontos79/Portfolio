@@ -1,0 +1,797 @@
+/* Set global styles for the entire page */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #1B1C1E;
+}
+
+/* Styles for the loading screen */
+.loading-screen {
+    font-family: 'hanson', sans-serif;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    background-color: #1B1C1E;
+    color: #AB88D9;
+    overflow: hidden;
+}
+
+/* Styles for the loading section, a part of the loading screen */
+.loading-section {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles for the title within the loading section */
+.loading-section .title {
+    margin: 0px 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 40px;
+}
+
+/* Styles for a bracket element within the loading section */
+.loading-section .bracket {
+    font-size: 40px;
+    margin: 0px 30px;
+    font-family: 'hanson', sans-serif;
+    color: #5FC58E;
+}
+
+/* Styles for an element with the ID 'loader' */
+#loader {
+    font-size: 40px;
+    font-family: 'hanson', sans-serif;
+    color: #5FC58E;
+}
+
+/* Keyframes for the 'sliding' animation */
+@keyframes sliding {
+    from {
+        transform: translateX(5%);
+    }
+    to {
+        transform: translateX(-30%);
+    }
+}
+
+/* Styles for a container with class 'container2' */
+.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Styles for an h1 element */
+h1 {
+    text-align: center;
+    font-family: "Hanson", sans-serif;
+    color: #fff;
+    font-size: 7rem;
+    text-transform: uppercase;
+}
+
+/* Styles for a wrapper element */
+.wrapper {
+    position: relative;
+    text-align: left;
+    height: 1.2em;
+}
+
+/* Styles for a strong element within the wrapper */
+.wrapper .strong {
+    font-family: "Hanson", sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+    padding-top: 3%;
+    font-weight: inherit;
+    display: flex;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+}
+
+/* Styles for a space element within the wrapper */
+.wrapper .space {
+    padding: 0.1em;
+}
+
+/* Styles for elements with classes 'in' or 'out' within the wrapper */
+.wrapper :is(.in, .out) {
+    opacity: 0;
+    transform: scaleY(0);
+}
+
+/* Styles for the active 'strong' element with the class 'out' */
+.strong.active .out {
+    opacity: 1;
+    transform: scaleY(1);
+    animation: textWave 0.2s ease reverse forwards;
+}
+
+/* Styles for the 'in' element within the wrapper */
+.wrapper .in {
+    animation: textWave 0.2s ease forwards;
+}
+
+/* Keyframes for the 'textWave' animation */
+@keyframes textWave {
+    0% {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+/* Styles for an element within a gallery with class 'scroll-down' */
+.gallery .scroll-down {
+    margin-top: -10%;
+    width: 50px;
+    height: 55px;
+    display: grid;
+    place-content: center;
+    margin-inline: auto;
+    border: 1px solid #5FC58E;
+    border-radius: 50%;
+    transition: 0.5s ease;
+    animation: scrollDown 2.5s linear infinite alternate;
+}
+
+/* Styles for an image within the gallery scroll-down element */
+.gallery .scroll-down img {
+    width: 22px;
+}
+
+/* Keyframes for the 'scrollDown' animation */
+@keyframes scrollDown {
+    0% {
+        transform: translateY(-12px);
+    }
+    100% {
+        transform: translateY(12px);
+    }
+}
+
+/* Styles for an image within an 'image-container' */
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Styles for an element with class 'waves2' */
+.waves2 {
+    rotate: -180deg;
+    margin-top: -5%;
+}
+
+/* Styles for an h4 element */
+h4 {
+    font-family: 'Min Sans';
+    text-transform: uppercase;
+    text-align: center;
+    width: 5%;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    color: #fff;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+/* Styles for a gradient background with class 'radical-gradient' */
+.radical-gradient {
+    background: rgb(96, 198, 143);
+    background: radial-gradient(ellipse 120% 110% at center, rgba(96, 198, 143, 1) 0%, rgba(27, 28, 30, 1) 45%);
+}
+
+/* Styles for a sub-title element */
+.sub-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15%;
+}
+
+/* Styles for an 'about' element */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Styles for a text element */
+.text {
+    font-family: "Hanson", sans-serif;
+    font-size: 3rem;
+    line-height: 1.2;
+    color: #fff;
+    width: 50%;
+    text-transform: uppercase;
+}
+
+/* Styles for a marquee container */
+.marquee-container {
+    margin-top: 17%;
+    overflow: hidden;
+    width: 100%;
+    background-color: #AB88D9;
+}
+
+/* Styles for the marquee element */
+marquee {
+    font-family: "Hanson", sans-serif;
+    padding-top: 2rem;
+    padding-top: 1rem;
+    color: white;
+    width: 100%;
+    font-size: 5rem;
+}
+
+/* Styles for a horizontal line with class 'line' */
+hr.line {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Styles for a content container */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles for a title element */
+.title {
+    font-family: "Hanson", sans-serif;
+    font-size: 3.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: 30px;
+}
+
+/* Styles for an icon button */
+.btn-icon {
+    background-color: var(--bg-color, white);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    transition: 0.5s ease;
+    width: 55px;
+    height: 55px;
+    border: 1px solid white;
+    --bg-color: transparent;
+}
+
+/* Styles for an SVG within the icon button */
+.btn-icon svg {
+    width: 25px;
+}
+
+/* Styles for a sub-title in the contact section */
+.sub-title-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Styles for a contact section */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles for a text element within the contact section */
+.text-contact {
+    font-family: "Hanson", sans-serif;
+    font-size: 3rem;
+    line-height: 1.2;
+    color: #fff;
+    width: 50%;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Styles for anchor (link) elements within the contact section */
+.contact a {
+    font-family: "Hanson", sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+
+/* * *
+Media Queries 
+* * */
+/* Styles for screens up to 319px width */
+@media (max-width: 319px) {
+    h1 {
+        text-align: center; /* Center align heading */
+        font-size: 3rem; /* Set heading font size */
+    }
+  
+    .wrapper .strong {
+        position: absolute; /* Position absolute for specific element */
+        top: 0; /* Set from the top */
+        transform: translateX(-50%); /* Center horizontally */
+        font-size: 1.2rem; /* Set font size */
+        padding-top: 5%; /* Add padding */
+    }
+  
+    .gallery .scroll-down {
+        margin-top: -30%; /* Adjust top margin */
+    }
+      
+    h4 {
+        font-size: 0.5rem; /* Set font size */
+        width: auto; /* Set width */
+        border-radius: 50px; /* Apply border radius */
+        padding-left: 5%; /* Add left padding */
+        padding-right: 5%; /* Add right padding */
+    }
+
+    .radical-gradient {
+        background: rgb(96, 198, 143); /* Set background color */
+        background: radial-gradient(ellipse 100% 70% at center, rgba(96, 198, 143, 1) 0%, rgba(27, 28, 30, 1) 45%); /* Apply radial gradient */
+    }
+
+    p {
+        text-align: center; /* Center align paragraphs */
+        font-size: 1.3rem; /* Set font size */
+        width: 80%; /* Set width */
+    }
+
+    marquee {
+        font-size: 2rem; /* Set font size for the marquee element */
+    }
+} 
+
+/* Styles for screens from 320px to 480px width */
+@media (min-width: 320px) and (max-width: 480px) {
+    .loading-section {
+        font-size: 3rem; /* Set font size */
+    }
+  
+    h1 {
+        text-align: center; /* Center align heading */
+        font-size: 3.5rem; /* Set heading font size */
+    }
+  
+    .wrapper .strong {
+        position: absolute; /* Position absolute for specific element */
+        top: 0; /* Set from the top */
+        transform: translateX(-50%); /* Center horizontally */
+        font-size: 1.2rem; /* Set font size */
+        padding-top: 5%; /* Add padding */
+    }
+  
+    .gallery .scroll-down {
+        margin-top: -30%; /* Adjust top margin */
+    }
+  
+    .text p {
+        font-size: 4rem; /* Set font size for paragraphs in the text class */
+    }
+    
+    h4 {
+        font-size: 0.5rem; /* Set font size */
+        width: auto; /* Set width */
+        border-radius: 50px; /* Apply border radius */
+        padding-left: 5%; /* Add left padding */
+        padding-right: 5%; /* Add right padding */
+        text-align: left; /* Left align text */
+    }
+
+    .radical-gradient {
+        background: rgb(96, 198, 143); /* Set background color */
+        background: radial-gradient(ellipse 130% 100% at center, rgba(96, 198, 143, 1) 0%, rgba(27, 28, 30, 1) 45%); /* Apply radial gradient */
+    }
+
+    .text {
+        text-align: center; /* Center align text */
+        font-size: 1.2rem; /* Set font size */
+        width: 80%; /* Set width */
+    }
+    
+    marquee {
+        font-size: 2.5rem; /* Set font size for the marquee element */
+    }
+
+    hr.line {
+        width: 80%; /* Set width */
+    }
+
+    .content {
+        flex-direction: row; /* Set flex direction */
+        justify-content: center; /* Center justify content */
+        align-items: center; /* Center align items */
+    }
+
+    .title {
+        font-size: 1.2rem; /* Set font size for titles */
+    }
+
+    .btn-icon {
+        width: 30px; /* Set width for icon buttons */
+        height: 30px; /* Set height for icon buttons */
+    }
+
+    .btn-icon svg {
+        width: 10px; /* Set width for SVG icons */
+    }
+    .text-contact, .contact a {
+        text-align: center; /* Center align text */
+        font-size: 1.2rem; /* Set font size */
+        width: 80%; /* Set width */
+    }
+}
+
+ /* Media query for devices with a width between 481px and 640px */
+@media (min-width: 481px) and (max-width: 640px) {
+
+    /* Styles for the loading section */
+    .loading-section {
+        font-size: 4rem;
+    }
+
+    /* Heading 1 styles */
+    h1 {
+        text-align: center;
+        font-size: 3.5rem;
+    }
+
+    /* Styles for a specific class within a wrapper */
+    .wrapper .strong {
+        position: absolute;
+        top: 0;
+        transform: translateX(-50%);
+        font-size: 2rem;
+        padding-top: 5%;
+    }
+
+    /* Styles for the gallery scroll-down section */
+    .gallery .scroll-down {
+        margin-top: -20%;
+    }
+
+    /* Heading 4 styles */
+    h4 {
+        font-size: 0.75rem;
+        width: auto;
+        border-radius: 50px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    /* Gradient background styles */
+    .radical-gradient {
+        background: rgb(96, 198, 143);
+        background: radial-gradient(ellipse 130% 110% at center, rgba(96, 198, 143, 1) 0%, rgba(27, 28, 30, 1) 45%);
+    }
+
+    /* Text block styles */
+    .text {
+        text-align: center;
+        font-size: 1.2rem;
+        width: 80%;
+    }
+
+    /* Marquee text styles */
+    marquee {
+        font-size: 3rem;
+    }
+
+    /* Horizontal line styles */
+    hr.line {
+        width: 80%;
+    }
+
+    /* Title styles */
+    .title {
+        font-size: 1.2rem;
+    }
+
+    /* Button with icon styles */
+    .btn-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* SVG icon within button styles */
+    .btn-icon svg {
+        width: 20px;
+    }
+
+    /* Contact text and links styles */
+    .text-contact,
+    .contact a {
+        text-align: center;
+        font-size: 1.2rem;
+        width: 80%;
+    }
+}
+
+/* Media query for devices with a width between 641px and 768px */
+@media (min-width: 641px) and (max-width: 768px) {
+
+    /* Styles for the loading section */
+    .loading-section {
+        font-size: 4rem;
+    }
+
+    /* Heading 1 styles */
+    h1 {
+        text-align: center;
+        font-size: 4.5rem;
+    }
+
+    /* Styles for a specific class within a wrapper */
+    .wrapper .strong {
+        position: absolute;
+        top: 0;
+        transform: translateX(-50%);
+        font-size: 2.5rem;
+        padding-top: 5%;
+    }
+
+    /* Styles for the gallery scroll-down section */
+    .gallery .scroll-down {
+        margin-top: -20%;
+    }
+
+    /* Text block paragraph styles */
+    .text p {
+        font-size: 6rem;
+    }
+
+    /* Heading 4 styles */
+    h4 {
+        font-size: 0.9rem;
+        width: auto;
+        border-radius: 50px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    /* Gradient background styles */
+    .radical-gradient {
+        background: rgb(96, 198, 143);
+        background: radial-gradient(ellipse 110% 100% at center, rgba(96, 198, 143, 1) 0%, rgba(27, 28, 30, 1) 45%);
+    }
+
+    /* Text block styles */
+    .text {
+        text-align: center;
+        font-size: 2rem;
+        width: 80%;
+    }
+
+    /* Marquee text styles */
+    marquee {
+        font-size: 3.5rem;
+    }
+
+    /* Horizontal line styles */
+    hr.line {
+        width: 80%;
+    }
+
+    /* Title styles */
+    .title {
+        font-size: 2rem;
+    }
+
+    /* Button with icon styles */
+    .btn-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* SVG icon within button styles */
+    .btn-icon svg {
+        width: 20px;
+    }
+
+    /* Contact text and links styles */
+    .text-contact,
+    .contact a {
+        text-align: center;
+        font-size: 2rem;
+        width: 80%;
+    }
+}
+
+  
+/* For screen sizes between 769px and 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Adjusting font size for the loading section */
+    .loading-section{
+        font-size: 5rem;
+    }
+
+    /* Styling for h1 tag */
+    h1 {
+        text-align: center;
+        font-size: 4.5rem;
+    }
+
+    /* Styling for specific elements within the wrapper */
+    .wrapper .strong {
+        position: absolute;
+        top: 0;
+        transform: translateX(-50%);
+        font-size: 3rem; 
+        padding-top: 5%;
+    }
+
+    /* Adjusting margin for scroll-down within the gallery */
+    .gallery .scroll-down {
+        margin-top: -20%; 
+    }
+
+    /* Stylizing h4 elements */
+    h4 {
+        font-size: 1.1rem;
+        width: auto;
+        border-radius: 50px;
+        /* Padding for h4 */
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    /* Creating a radial gradient background */
+    .radical-gradient {
+        background: rgb(96, 198, 143);
+        /* Applying radial gradient */
+        background: radial-gradient(ellipse 130% 110% at center, rgba(96, 198, 143, 1) 0%, rgba(27, 28, 30, 1) 45%);
+    }
+
+    /* Styling for text elements */
+    .text {
+        text-align: center;
+        font-size: 2.3rem;
+        width: 80%;
+    }
+
+    /* Adjusting font size for marquee */
+    marquee {
+        font-size: 4.3rem;
+    }
+
+    /* Styling for horizontal line */
+    hr.line {
+        width: 80%; 
+    }
+
+    /* Setting font size for titles */
+    .title {
+        font-size: 2.3rem; 
+    }
+
+    /* Adjusting dimensions for icon buttons */
+    .btn-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    /* Adjusting SVG size within icon buttons */
+    .btn-icon svg {
+        width: 20px;
+    }
+
+    /* Styling contact text and links */
+    .text-contact, .contact a {
+        text-align: center;
+        font-size: 2.3rem;
+        width: 80%;
+    }
+}
+
+/* For screen sizes between 1025px and 1200px */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    /* Adjusting title font size within the loading section */
+    .loading-section .title {
+        font-size: 39px;
+    }
+
+    /* Styling for h1 tag */
+    h1 {
+        text-align: center;
+        font-size: 8rem;
+    }
+
+    /* Styling for specific elements within the wrapper */
+    .wrapper .strong {
+        position: absolute;
+        top: 0;
+        transform: translateX(-50%);
+        font-size: 5rem; 
+        padding-top: 3%;
+        margin: 0;
+    }
+}
+  
+/* Media query for screen widths between 1201px and 1440px */
+@media (min-width: 1201px) and (max-width: 1440px) {
+    .loading-section .title {
+        font-size: 40px; /* Set the font size for the title inside the loading section */
+    }
+  
+    h1 {
+        text-align: center; /* Center-align the text inside h1 elements */
+        font-size: 8rem; /* Set the font size for h1 elements */
+    }
+  
+    .wrapper .strong {
+        position: absolute; /* Position the elements absolutely */
+        top: 0; /* Place them at the top of their container */
+        transform: translateX(-50%); /* Center them horizontally */
+        font-size: 5rem; /* Set the font size for elements with class 'strong' */
+        padding-top: 3%; /* Add some padding to the top */
+        margin: 0; /* Remove any margin */
+    }
+}
+
+/* Media query for screen widths between 1441px and 1600px */
+@media (min-width: 1441px) and (max-width: 1600px) {
+    .loading-section .title {
+        font-size: 42px; /* Set the font size for the title inside the loading section */
+    }
+  
+    h1 {
+        text-align: center; /* Center-align the text inside h1 elements */
+        font-size: 8rem; /* Set the font size for h1 elements */
+    }
+  
+    .wrapper .strong {
+        position: absolute; /* Position the elements absolutely */
+        top: 0; /* Place them at the top of their container */
+        transform: translateX(-50%); /* Center them horizontally */
+        font-size: 5rem; /* Set the font size for elements with class 'strong' */
+        padding-top: 3%; /* Add some padding to the top */
+    }
+}
+
+/* Media query for screen widths larger than or equal to 1601px */
+@media (min-width: 1601px) { 
+    .loading-section .title {
+        font-size: 44px; /* Set the font size for the title inside the loading section */
+    }
+  
+    h1 {
+        text-align: center; /* Center-align the text inside h1 elements */
+        font-size: 8rem; /* Set the font size for h1 elements */
+    }
+  
+    .wrapper .strong {
+        position: absolute; /* Position the elements absolutely */
+        top: 0; /* Place them at the top of their container */
+        transform: translateX(-50%); /* Center them horizontally */
+        font-size: 5rem; /* Set the font size for elements with class 'strong' */
+        padding-top: 3%; /* Add some padding to the top */
+    }
+}
